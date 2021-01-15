@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="414.0" prefWidth="604.0" style="-fx-background-color: #121212;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CourseController">
+   <top>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ENTER COURSE DETAILS" textAlignment="CENTER" wrappingWidth="197.85546875" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.719047619047619" endY="0.49523809523809526">
+               <stops>
+                  <Stop color="#5b66b5" />
+                  <Stop color="#d75353" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </Text>
+   </top>
+   <left>
+      <VBox prefHeight="285.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="courseName" promptText="Course name" style="-fx-background-color: #05071F; -fx-background-radius: 2em; -fx-border-color: #fff; -fx-border-radius: 2em; -fx-text-fill: #fff;">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <tooltip>
+                  <Tooltip fx:id="courseNameTooltip" text="Enter course name" />
+               </tooltip></TextField>
+            <TextField fx:id="courseCode" promptText="Course code" style="-fx-background-color: #05071F; -fx-background-radius: 2em; -fx-border-color: #fff; -fx-border-radius: 2em; -fx-text-fill: #fff;">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <tooltip>
+                  <Tooltip fx:id="courseCodeTooltip" text="Enter course code" />
+               </tooltip></TextField>
+            <TextField fx:id="courseId" promptText="Course id" style="-fx-background-color: #05071F; -fx-background-radius: 2em; -fx-border-color: #fff; -fx-border-radius: 2em; -fx-text-fill: #fff;">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <tooltip>
+                  <Tooltip fx:id="courseIdTooltip" text="Enter course id" />
+               </tooltip></TextField>
+            <TextField fx:id="labStatus" promptText="Lab status (true or false)" style="-fx-background-color: #05071F; -fx-background-radius: 2em; -fx-border-color: #fff; -fx-border-radius: 2em; -fx-text-fill: #fff;">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <tooltip>
+                  <Tooltip fx:id="courseLabStatusTooltip" text="Give lab status (True or false )" />
+               </tooltip></TextField>
+            <ComboBox fx:id="courseInstructorChoiceBox" prefWidth="150.0" promptText="Select instructor">
+               <tooltip>
+                  <Tooltip fx:id="teachersTooltip" text="Select teacher of course" />
+               </tooltip>
+               <VBox.margin>
+                  <Insets left="22.0" top="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="courseCreditHoursChoiceBox" prefWidth="150.0" promptText="Select credit hours ">
+               <tooltip>
+                  <Tooltip fx:id="creditHoursTooltip" text="Seect Credit hours of course" />
+               </tooltip>
+               <VBox.margin>
+                  <Insets left="22.0" top="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="courseWHChoiceBox" prefWidth="150.0" promptText="Select weekly lectures">
+               <tooltip>
+                  <Tooltip fx:id="weeklyHoursTooltip" text="Select lectures per week of course" />
+               </tooltip>
+               <VBox.margin>
+                  <Insets left="22.0" top="10.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Button mnemonicParsing="false" onAction="#onSaveButtonPressed" style="-fx-background-color: blue;" text="Save" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="70.0" top="10.0" />
+               </VBox.margin></Button>
+         </children>
+         <BorderPane.margin>
+            <Insets left="10.0" top="20.0" />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="375.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Courses" textAlignment="CENTER" wrappingWidth="197.85546875">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Text>
+            <ListView fx:id="courseListView" prefHeight="200.0" prefWidth="213.0">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin></ListView>
+            <Button mnemonicParsing="false" onAction="#onNextButtonPressed" style="-fx-background-color: orange;" text="Next" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="80.0" top="10.0" />
+               </VBox.margin></Button>
+         </children>
+         <BorderPane.margin>
+            <Insets right="10.0" top="15.0" />
+         </BorderPane.margin>
+      </VBox>
+   </right>
+</BorderPane>
